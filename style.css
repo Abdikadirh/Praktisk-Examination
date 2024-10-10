@@ -1,0 +1,134 @@
+/* Grundläggande styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigationsmeny */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff9800;
+}
+
+/* Huvudinnehåll */
+main {
+    padding: 2rem;
+}
+
+.info {
+    text-align: center;
+    background-color: #ff9800;
+    color: white;
+    padding: 3rem 1rem;
+}
+
+.info h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+.info p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.about, .interests {
+    margin-top: 2rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 1rem;
+    color: rgb(120, 120, 255);
+}
+
+p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    align-items: center;
+}
+
+.grid-container p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.interest-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsiv design */
+
+/* Anpassning för mobila enheter */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Anpassning för större skärmar (t.ex. datorskärmar) */
+@media (min-width: 1024px) {
+    .info {
+        padding: 5rem 2rem;
+    }
+
+    nav ul li {
+        margin: 0 30px;
+    }
+}
